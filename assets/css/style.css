@@ -1,0 +1,29 @@
+body {
+    background-color: #ffffff;
+    font-family: 'Source Sans Pro', sans-serif;
+    margin: 0;
+}
+
+#logo-citi {
+    width: 60px;
+    margin: 0 50px;
+}
+
+h1 {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+header {
+ box-shadow: 0 2px 6px 0 rgba(0,0,0,.12), inset 0 -1px 0 0 #dadce0;
+ display: flex;
+ align-items: center;
+}
+
+h2 {
+    margin: 50px;
+}
+
+article {
+    margin: 50px;
+}

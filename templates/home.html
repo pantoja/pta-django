@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Blog Django | CITi - PTA</title>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,600i" rel="stylesheet">
+    <link rel="stylesheet"  href="{% static 'css/style.css' %}" >
+</head>
+<body>
+    <header>
+        <img src="{% static 'images/citi.svg'%}" alt="logo" id="logo-citi">
+        <h1>Blog PTA</h1>
+    </header>
+    <main>
+        <h2>Postagens</h2>
+        {% for post in posts %}
+            <article class="post">
+                <h3>
+                    {{ post.title }}
+                </h3>
+                <span>{{ post.created_date }}</span>
+                <span>{{ post.author }}</span>
+                <p class="post-text">
+                    {{ post.text }}
+                </p>
+            </article>    
+        {% endfor %}
+    </main>
+</body>
+</html>
