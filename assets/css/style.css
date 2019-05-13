@@ -26,4 +26,21 @@ h2 {
 
 article {
     margin: 50px;
+    padding: 15px;
+    border-top: 2px solid grey;
+}
+
+article > h3 {
+    margin: 10px 0;
+}
+.post-info {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.post-info > span {
+    width:100%;
+    font-size: 0.9em;
+    color: rgb(70, 70, 70);
 }

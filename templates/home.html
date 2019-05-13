@@ -21,11 +21,13 @@
                 <h3>
                     {{ post.title }}
                 </h3>
-                <span>{{ post.created_date }}</span>
-                <span>{{ post.author }}</span>
                 <p class="post-text">
                     {{ post.text }}
                 </p>
+                <div class="post-info">
+                    <span>Criado por: {{ post.author }}</span>
+                    <span>{{ post.created_date }}</span>
+                </div>
             </article>    
         {% endfor %}
     </main>
