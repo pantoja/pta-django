@@ -1,3 +1,5 @@
 Django==2.2.1
 pytz==2019.1
 sqlparse==0.3.0
+python-decouple==3.1
+django-templated-email==2.3.0

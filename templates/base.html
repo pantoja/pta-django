@@ -1,0 +1,32 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="pt-br">
+    
+<head>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  {% block meta %}
+  {% endblock %}
+  <title>Blog Django | CITi - PTA</title>
+    {% block css %}
+    <link rel="stylesheet"  href="{% static 'css/style.css' %}" >
+
+    {% endblock %}
+</head>
+<body>
+    {% include "includes/navbar.html" %}
+    
+    {% block body %}
+        
+    {% endblock %}
+
+    {% include 'includes/footer.html' %}
+
+    {% block script %}
+    {% endblock %}
+</body>
+
+
+</html>

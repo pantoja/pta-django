@@ -17,7 +17,10 @@ from django.contrib import admin
 from django.urls import path
 from core.views import HomeView
 
+from django.conf.urls import url, include
+
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', HomeView.as_view(), name='index')
+    path('', include(('core.urls'), namespace='core')),
 ]

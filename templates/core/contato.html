@@ -1,0 +1,40 @@
+{% extends 'base.html' %} 
+{% load static %}
+
+{% block css %}
+  <link rel="stylesheet" href="{% static 'css/contact.css' %}">
+{% endblock %}
+
+{% block body %}
+<section class="contato-section" id="contato">
+    <h2 class="contato-title">Contato</h2>
+    <div class="contato-container">
+      <div class="contato-left-info">
+          <h4 class="contato-left-info-title">TELEFONE</h4>
+          <p class="contato-left-info-content">(XX) X XXXX-XXXX</p>
+          <h4 class="contato-left-info-title">EMAIL</h4>
+          <div class="contato-left-mail">
+              <a href="mailto: exemplo@hotmail.com" class="contato-left-info-content">exemplo@hotmail.com</a>
+              <div class="contato-left-email-underline"></div>
+          </div>
+      </div>
+      <form class="contato-form"  method="POST" autocomplete="off">
+        {% csrf_token %}
+          <div class="contato-line">
+              <input class="contato-text-input" type="text" name="nome" placeholder="Nome Completo" required="required">
+              <input class="contato-text-input" type="email" name="email" placeholder="Email" required="required">
+          </div>
+          <div class="contato-line">
+              <input class="contato-text-input" type="text" name="assunto" placeholder="Assunto" required="required">
+              <input class="contato-text-input" type="telefone" name="telefone" placeholder="Telefone" required="required">
+          </div>
+          <textarea class="contato-textarea" name="mensagem" placeholder="Em que posso lhe ajudar?" required="required"> </textarea>
+          <p class="contato-feedback"></p>
+          <input class="contato-btn" type="submit" value="ENVIAR">
+      </form>
+    </div>
+</section>
+{% endblock %}
+
+{% block script %}
+{% endblock %}
