@@ -1,0 +1,40 @@
+{% extends 'base.html' %} 
+{% load static %}
+
+{% block meta %}
+{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/institute.css' %}">
+
+{% endblock %}
+
+{% block body %}
+<div id="institute">
+    <div id="institute-container">
+        {% if Institucional %}
+            <div class="institute-img" id="institute-img">
+                <div class="image" style="background-image: url('{{ Institucional.image1.url }}')"></div>
+                <div class="image" style="background-image: url('{{ Institucional.image2.url }}')"></div>
+                <div class="image" style="background-image: url('{{ Institucional.image3.url }}')"></div>
+            </div>
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span> 
+                <span class="dot" onclick="currentSlide(2)"></span> 
+                <span class="dot" onclick="currentSlide(3)"></span> 
+            </div>
+            <div class="institute-flex" id="institute-info">
+                <div class="flex-title">O CITi</div>
+                <div class="flex-text"> {{ Institucional.aboutInstitute }} </div>
+            </div>
+        {% else %}
+            <h1 id="institute-no-query">Ainda não há informações.</h1>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
+
+{% block script %}
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="{% static 'js/build/institute.min.js' %}"></script>
+{% endblock %} 

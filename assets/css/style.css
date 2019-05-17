@@ -24,11 +24,12 @@ header {
 header > a{
     text-decoration: none;
     padding-left:10px;
+    text-align: center;
     color: black; 
 }
 
 header > a:hover{
-    color: green; 
+    border-bottom: 2px solid #6800e4;
 }
 
 h2 {
@@ -38,7 +39,7 @@ h2 {
 article {
     margin: 50px;
     padding: 15px;
-    border-top: 2px solid grey;
+    border-top: 2px solid #51e678;
 }
 
 article > h3 {
