@@ -1,0 +1,20 @@
+{% load staticfiles %}
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-telefone">
+            <span>Tel:(81) 997748348 </span>
+        </div>
+       
+        <div class="footer-email">
+            <a class="footer-email-link" href="mailto:{{ footer.Email }}">contato@citi.org.br</a>  
+        </div>
+        <div class="footer-made">
+            <p>Made with <i class="fas fa-code"></i> and <i class="fas fa-heart"></i> by </p>
+            <a href="http://citi.org.br/" rel="nofollow, external, noopener" target="_blank"> <img src="{% static 'images/citi.svg' %}" alt="Logo do CITi" class="funcionamento-ant"></a>
+        </div>
+    </div>
+</footer>
+{% block script %}
+
+
+{% endblock %}
