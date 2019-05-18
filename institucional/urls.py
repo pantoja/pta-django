@@ -6,5 +6,4 @@ app_name = 'institucional'
 
 urlpatterns = [
   path('', InstitucionalView.as_view(), name='institucional'),
-
 ]

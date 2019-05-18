@@ -21,13 +21,18 @@
       <form class="contato-form"  method="POST" autocomplete="off">
         {% csrf_token %}
           <div class="contato-line">
+            <label for="Nome" class="contato-label">Nome:</label>
               <input class="contato-text-input" type="text" name="nome" placeholder="Nome Completo" required="required">
+              <label for="Email" class="contato-label">Email:</label>
               <input class="contato-text-input" type="email" name="email" placeholder="Email" required="required">
           </div>
           <div class="contato-line">
+              <label for="Assunto" class="contato-label">Assunto:</label>
               <input class="contato-text-input" type="text" name="assunto" placeholder="Assunto" required="required">
+              <label for="Telefone" class="contato-label">Telefone:</label>
               <input class="contato-text-input" type="telefone" name="telefone" placeholder="Telefone" required="required">
           </div>
+          <label for="Mensagem" class="contato-label" id="contato-mensagem-label">Mensagem:</label>
           <textarea class="contato-textarea" name="mensagem" placeholder="Em que posso lhe ajudar?" required="required"> </textarea>
           <p class="contato-feedback"></p>
           <input class="contato-btn" type="submit" value="ENVIAR">
