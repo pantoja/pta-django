@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.views import generic
 from .models import Posts
+from core.forms import PostForm
 
 from django.shortcuts import render_to_response
 from django.http import HttpResponseRedirect, HttpResponse  
@@ -37,3 +38,14 @@ class ContatoView(generic.TemplateView):
         },)
         print('teste2')
         return HttpResponseRedirect(reverse_lazy("core:contato"))
+
+class CreatePostView(generic.CreateView):
+    template_name = 'core/create-post.html'
+    model = Posts
+    form_class = PostForm
+
+    def get_success_url(self):
+        return reverse_lazy('core:home')
+    
+    def get_initial(self):
+        return {'author': self.request.user}

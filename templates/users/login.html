@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css %}
+  <link rel="stylesheet" href="{% static 'css/users.css' %}">
+{% endblock %}
+
+{% block body %}
+<form class="auth-form" method="post">
+    {% csrf_token %}
+    <fieldset>
+        <h1>Login</h1>
+        <div class="user-form">
+            {{ form.as_p }}
+        </div>
+        <button type="submit" value="login">Login</button>
+    </fieldset>
+    <a href="#">Não tem conta? Registre aqui!</a>
+</form>    
+{% endblock %}

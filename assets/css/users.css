@@ -1,0 +1,12 @@
+.errorlist {
+    width: 500px;
+    padding: 15px;
+    border: red solid 2px;
+    list-style: none;
+    color: red;
+}
+
+fieldset {
+    padding: 20px;
+    margin-bottom: 15px;
+}

@@ -1,0 +1,27 @@
+{% extends 'base.html' %} 
+{% load static %}
+{% load widget_tweaks %}
+
+
+{% block css %}
+  <link rel="stylesheet" href="{% static 'css/create-post.css' %}">
+{% endblock %}
+
+{% block body %}
+<form class="contato-form"  method="POST" autocomplete="off">
+    {% csrf_token %}
+    <h1>Criar uma Postagem</h1>
+    <p>
+        {{ form.title.label_tag }}
+        {% render_field form.title class="form-field" placeholder="Título da postagem"|attr='required:True' %}
+    </p>
+    <p>
+        {{ form.text.label_tag }}
+        {% render_field form.text class="form-field" placeholder="Conteúdo da postagem"|attr='required:True' %}
+    </p>
+    <input class="contato-btn" type="submit" value="ENVIAR">
+</form>
+{% endblock %}
+
+{% block script %}
+{% endblock %}
