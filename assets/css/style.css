@@ -38,8 +38,6 @@ header > div {
 
 a:hover {
     color: green;
-header > a:hover{
-    border-bottom: 2px solid #6800e4;
 }
 
 h2 {
