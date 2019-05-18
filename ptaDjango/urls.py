@@ -15,8 +15,6 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from core.views import HomeView
-
 from django.conf.urls import url, include
 
 
@@ -27,4 +25,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(('core.urls'), namespace='core')),
     path('institucional/', include(('institucional.urls'), namespace='institucional')),
+    path('', include(('users.urls'), namespace='users')),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

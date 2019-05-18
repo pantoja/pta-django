@@ -1,8 +1,26 @@
 {% load static%}
 
 <header>
-    <img src="{% static 'images/citi.svg'%}" alt="logo" id="logo-citi">
-    <a class="navbar-titulo" href="{% url 'core:home' %}">Blog PTA</a>
-    <a class="navbar-titulo" href="{% url 'institucional:institucional' %}">Quem somos</a>
-    <a class="navbar-titulo" href="{% url 'core:contato' %}">Contato</a>   
+    <div>
+        <a href="{% url 'core:home'%}"">
+            <img src="{% static 'images/citi.svg'%}" alt="logo" id="logo-citi">
+        </a>
+        <a class="navbar-titulo" href="{% url 'core:home' %}">Blog PTA</a>
+        <a class="navbar-titulo" href="{% url 'core:contato' %}">Contato</a> 
+        {% if user.is_authenticated %}
+        <a class="navbar-titulo" href="{% url 'core:create-post' %}">Postar</a>
+        {% endif %}
+    </div>
+    <div>
+        {% if user.is_authenticated %}
+            <p class="navbar-titulo">
+                Olá, {{ user.username }}!
+            </p>
+            <a href="{% url 'users:logout' %}" class="navbar-titulo">Logout</a>
+
+        {% else %}
+            <a class="navbar-titulo" href="{% url 'users:login' %}">Login</a>  
+            <a class="navbar-titulo" href="#">Sign Up</a>
+        {% endif %}
+    </div>
 </header>
