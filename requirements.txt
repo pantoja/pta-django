@@ -1,4 +1,4 @@
-Django==2.2.1
+Django==2.2.10
 django-render-block==0.6
 django-templated-email==2.3.0
 django-widget-tweaks==1.4.3
